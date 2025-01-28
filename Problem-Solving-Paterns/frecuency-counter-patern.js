@@ -151,6 +151,43 @@ function countFrecuencyNoSpaces(str) {
 console.log(countFrecuencyNoSpaces("Hello World")
 )
 
+//EXERCISE 8 
+//Objective: Check if the second string is an anagram of the first
+//Exercise: Given two strings, write a function to determine if the second string is an anagram of the first.
+
+function isAnagram(str1, str2) {
+    if (str1.length !== str2.length) {
+        return false
+    }
+
+    let lookUp = {}
+
+    for (let i = 0; i < str1.length; i++) {
+        let letter = str1[i]
+        lookUp[letter] = (lookUp[letter] || 0) + 1
+    }
+
+    for (let i = 0; i < str2.length; i++) {
+        let letter = str2[i]
+        if (!lookUp[letter]) {
+            return false
+        } else {
+            lookUp[letter] -= 1
+        }
+    }
+    return true
+}
+
+console.log(isAnagram("hello", "hlleo")) //return true
+console.log(isAnagram("anagram", "magrana")) // return true
+console.log(isAnagram("constelación", "nocsletsion")) // return false
+
+
+
+
+
+
+
 
 
 
