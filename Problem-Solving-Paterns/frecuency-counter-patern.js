@@ -2,7 +2,7 @@
 //Objective: Check if two numbers have same digit frecuency
 //Exercise: Write a function called sameFrequency. Given two positive integers, find out if the two numbers have the same frequency of digits.
 
-function sameFrequency(num1, num2) {
+function checkSameFrequency(num1, num2) {
     let num1String = num1.toString()
     let num2String = num2.toString()
 
@@ -27,14 +27,14 @@ function sameFrequency(num1, num2) {
     return true
 }
 
-console.log(sameFrequency(124, 421))
+console.log(checkSameFrequency(124, 421))
 
 // EXERCISE 2
 
 //Objective: Check if there are duplicates in a variable number of arguments.
 //Excercise:Implement a function called, areThereDuplicates which accepts a variable number of arguments, and checks whether there are any duplicates among the arguments passed in.  You can solve this using the frequency counter pattern OR the multiple pointers pattern.
 
-function areThereDuplicates(...rest) {
+function checkDuplicates(...rest) {
     let counter = {}
 
     for (const val of rest) {
@@ -45,7 +45,7 @@ function areThereDuplicates(...rest) {
     return false
 }
 
-console.log(areThereDuplicates(1, 2, 2, 4, 5))
+console.log(checkDuplicates(1, 2, 2, 4, 5))
 
 //EXERCISE 3
 
@@ -74,7 +74,7 @@ console.log(countFrecuency("pronunciation"))
 //Objective: Count how many times each word appears in a string.
 //Exercise: Write a function that takes a string as input and returns the frequency of each word in that string.
 
-function wordRecurrence(str) {
+function checkWordRecurrence(str) {
     if (!str) {
         return false
     }
@@ -92,13 +92,13 @@ function wordRecurrence(str) {
 
 const string = "You are my sunshine my only sunshine"
 
-console.log(wordRecurrence(string))
+console.log(checkWordRecurrence(string))
 
 //EXERCISE 5
 //Objective: Count how many vowels (a, e, i, o, u) are in a string.
 //Exercise: Write a function that counts the vowels in a given string and returns the total count.
 
-function countingVowels(str, elementToCheck) {
+function countVowels(str, elementToCheck) {
     let totalVowels = 0
     for (let letter of str) {
         if (elementToCheck.includes(letter)) {
@@ -108,13 +108,13 @@ function countingVowels(str, elementToCheck) {
     return console.log(`The string includes ${totalVowels} vowels`)
 }
 
-console.log(countingVowels("Oid mortales el grito sagrado, libertad! libertad! libertad!", "aeiou"))
+console.log(countVowels("Oid mortales el grito sagrado, libertad! libertad! libertad!", "aeiou"))
 
 //EXERCISE 6
 //Objective: Find the most frequent element in an array.
 //Exercise: Write a function that returns the most frequent element in an array. If there are multiple, return the first one.
 
-function mostFrequent(arr) {
+function findMostFrequent(arr) {
     let count = {}
 
     let maxFreq = 0
@@ -131,7 +131,7 @@ function mostFrequent(arr) {
     return maxFreq
 }
 
-console.log(mostFrequent([1, 22, 22, 22, 3, 3, 4, 55, 6]))
+console.log(findMostFrequent([1, 22, 22, 22, 3, 3, 4, 55, 6]))
 
 //EXERCISE 7
 //Objective: Count the frequency of each character in a string, excluding spaces.
